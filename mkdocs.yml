@@ -2,6 +2,7 @@ site_name: AegisLabs
 site_description: Smart Contract Security Audit Knowledge Base - Vulnerability Analysis, Audit Methods, and Best Practices
 site_author: AegisLabs
 site_url: https://aegis360.xyz/
+use_directory_urls: true
 
 # Repository
 repo_name: Contract-Audit-Knowledge-Libs
