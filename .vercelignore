@@ -1,0 +1,8 @@
+# Vercel ignore file
+docs/
+*.md
+!README.md
+LICENSE
+.gitignore
+.vercelignore
+

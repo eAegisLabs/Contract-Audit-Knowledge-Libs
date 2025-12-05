@@ -1,0 +1,109 @@
+site_name: Contract Audit Knowledge Library
+site_description: Smart Contract Security Audit Knowledge Base - Vulnerability Analysis, Audit Methods, and Best Practices
+site_author: eAegisLabs
+site_url: https://eaegislabs.github.io/Contract-Audit-Knowledge-Libs/
+
+# Repository
+repo_name: Contract-Audit-Knowledge-Libs
+repo_url: https://github.com/eaegislabs/Contract-Audit-Knowledge-Libs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 eAegisLabs
+
+# Theme Configuration
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Navigation
+nav:
+  - Home: index.md
+  - Security Vulnerabilities:
+    - Reentrancy: vulnerabilities/reentrancy.md
+    - Integer Overflow: vulnerabilities/integer-overflow.md
+    - Access Control: vulnerabilities/access-control.md
+    - Logic Errors: vulnerabilities/logic-errors.md
+    - Front Running: vulnerabilities/front-running.md
+    - Timestamp Dependence: vulnerabilities/timestamp-dependence.md
+  - Audit Methods:
+    - Static Analysis: audit-methods/static-analysis.md
+    - Dynamic Analysis: audit-methods/dynamic-analysis.md
+    - Formal Verification: audit-methods/formal-verification.md
+    - Code Review: audit-methods/code-review.md
+  - Tools & Resources:
+    - Audit Tools: tools/audit-tools.md
+    - Testing Frameworks: tools/testing-frameworks.md
+    - Resources: tools/resources.md
+  - Case Studies:
+    - Index: case-studies/index.md
+  - Best Practices:
+    - Development Standards: best-practices/development-standards.md
+    - Security Patterns: best-practices/security-patterns.md
+    - Defense Strategies: best-practices/defense-strategies.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eaegislabs
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/eaegislabs
+  version:
+    provider: mike
+
