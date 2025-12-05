@@ -6,12 +6,24 @@
   "trailingSlash": true,
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "/:path*/index.html"
+      "source": "/(.*)/$",
+      "destination": "/$1/index.html"
     },
     {
       "source": "/",
       "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)\\.md$",
+      "destination": "/$1/",
+      "permanent": true
+    },
+    {
+      "source": "/index.md",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
