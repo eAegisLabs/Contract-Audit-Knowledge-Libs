@@ -36,9 +36,11 @@ vercel --prod
 
 The project includes a `vercel.json` file with the following configuration:
 
-- **Build Command**: `pip install -r requirements.txt && mkdocs build`
+- **Build Command**: `pip install -r requirements.txt && python3 -m mkdocs build`
 - **Output Directory**: `site`
 - **Install Command**: `pip install -r requirements.txt`
+
+**Note**: We use `python3 -m mkdocs` instead of `mkdocs` directly to ensure the command is found in Vercel's build environment.
 
 Vercel will automatically:
 - Install Python dependencies
